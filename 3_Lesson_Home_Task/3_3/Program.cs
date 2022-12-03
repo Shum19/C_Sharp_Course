@@ -11,10 +11,10 @@ int InputData(string message)
     return number;
 }
 
-void TableOfCubic (int digit) 
+/*void TableOfCubic (int digit) 
 {
     int i = 1;
-    double table = 0;
+    double  table = 0;
     while (i <= digit)
     {
         if (i == digit)
@@ -33,4 +33,28 @@ void TableOfCubic (int digit)
 
 int test = InputData("Write a digit ");
 TableOfCubic(test);
+*/
 
+// решение с преобразованием в массив
+void TableOfCubic (int digit) 
+{
+    int i = 0;
+    double  [] table = new double [digit];
+    while (i < digit)
+    {
+        if (i == digit-1)
+        {
+            table [i] = Math.Pow (i + 1, 3);
+            Console.Write($"{table[i]}.");
+        }
+        else 
+        {
+            table [i] = Math.Pow(i + 1, 3);
+            Console.Write($"{table[i]}, ");
+        }
+        i++;
+    }
+}
+
+int test = InputData("Write a digit ");
+TableOfCubic(test);
