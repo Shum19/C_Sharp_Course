@@ -8,7 +8,7 @@ Console.Clear();
 int [] CreatingArray (int size)
 {
     int [] arr = new int [size];
-    Console.Write("[");
+    Console.Write("[ ");
     for (int i = 0; i < arr.Length; i++)
     {
         arr [i] = new Random().Next(-100, 101);
@@ -30,5 +30,5 @@ void OddPositionSum(int [] array)
 }
 
 
-int [] test = CreatingArray (4);
+int [] test = CreatingArray (int.Parse(Console.ReadLine()));
 OddPositionSum(test);
