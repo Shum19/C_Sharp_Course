@@ -4,7 +4,7 @@
 */
 Console.Clear();
 
-double [] CreatingArray (int size)
+double [] CreatingArray (int size, int from, int to)
 {
     double [] arr = new double [size];
     Random elements = new Random ();
@@ -12,7 +12,7 @@ double [] CreatingArray (int size)
     Console.Write("[ ");
     for (int i = 0; i < arr.Length; i++)
     {
-        arr [i] = Math.Round(elements.NextDouble()*100, 2);
+        arr [i] = Math.Round(elements.NextDouble() * (from + to) - from, 2);
         Console.Write($"{arr [i]} ");
     }
     Console.Write("] - > ");
@@ -40,5 +40,7 @@ void DifferencOfMaxMin (double[] array)
     
 }
 
-double [] test = CreatingArray (int.Parse(Console.ReadLine()));
+double [] test = CreatingArray (int.Parse(Console.ReadLine()),
+                                int.Parse(Console.ReadLine()),
+                                int.Parse(Console.ReadLine()));
 DifferencOfMaxMin(test);
