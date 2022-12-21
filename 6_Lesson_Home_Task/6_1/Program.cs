@@ -21,15 +21,15 @@ int[] InputNumbers ()
         // почему элементы arr [i] равны 0 не смотря на то что я вводила числа в консоль
         // в предыдущем цикле?
         // и таки образом у меня новыц массив заполняется 0 с количеством элементов равное i
-        /*int [] newArr = new int [i];
+        int [] newArr = new int [i];
             for (int j = 0; j < newArr.Length; j++)
             {
-                newArr [j] = arr [i];
+                newArr [j] = arr [j];
             }
           return newArr;
-        */
-        Array.Resize(ref arr, i);
-        return arr;
+        
+        /*Array.Resize(ref arr, i);
+        return arr;*/
     }
 
 void PrintArr(int [] arr)
