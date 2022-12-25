@@ -42,7 +42,7 @@ void PosNegSum(int[] array)
         Console.WriteLine($"Sum of Pos is {posCount}");
 }
 
-int [] test = GreatingArr();
+int [] test = CreatingArr();
 Console.WriteLine();
 PosNegSum(test);
 
