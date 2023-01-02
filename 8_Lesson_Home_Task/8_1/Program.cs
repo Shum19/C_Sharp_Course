@@ -43,10 +43,9 @@ int [,] MaxToMin(int [,] arr)
         {
             max = arr [i, j];
             for (p = 0; p <= j; p++)
-            {
                 if (max > arr [i, p])
-                    (arr [i, j], arr [i, p]) = (arr [i, p], arr [i, j]);
-            }
+                    (arr [i, j], arr [i, p]) = 
+                    (arr [i, p], arr [i, j]);
         }
     }
     return arr;
